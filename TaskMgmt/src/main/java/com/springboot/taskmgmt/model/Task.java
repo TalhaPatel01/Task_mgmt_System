@@ -39,7 +39,7 @@ public class Task {
 
     @CreationTimestamp
     private Instant updatedAt;
-//
-//    @ManyToOne
-//    private User user;
+
+    @ManyToOne
+    private Doer doer;
 }
