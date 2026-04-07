@@ -48,7 +48,7 @@ public class TaskService {
 
     public TaskResDto getTaskById(long taskId) {
         Task task = taskRepository.findById(taskId)
-                .orElseThrow(()->new ResourceNotFoundException("Task with given id not found"));
+                .orElseThrow(()->new ResourceNotFoundException("Invalid task id"));
 
         return TaskMapper.mapToDto(task);
     }
